@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assetss/images/favicon-32x32.png" type="image/png">
+    <title>Submit Content</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <style>
+        body {
+            background-color: #dcd1f1;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            padding: 10px 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-radius: 10px;
+            border: solid 1px #0296d9;
+            border-bottom: solid 1px #90c2ff;
+            background: linear-gradient(135deg, #0296d9, rgb(14, 118, 255));
+            color: #fff;
+            font-weight: bolder;
+            transition: all 0.2s ease;
+            box-shadow: 0px 2px 3px #000d3848, inset 0px 4px 5px rgb(6, 111, 232),
+                inset 0px -4px 5px #0296d9;
+        }
+
+        .btn-custom:active {
+            box-shadow: inset 0px 4px 5px#0296d9, inset 0px -4px 5px #0296d9;
+            transform: scale(0.995);
+        }
+
+        textarea {
+            min-height: 200px;
+        }
+        .container1{
+            margin-top: 7rem;
+        }
+    </style>
+    <link rel="shortcut icon" href="assets/img/logo/title1.svg" type="image/x-icon" />
+
+	<!--=====CSS=======-->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/fontawesome.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/nice-select.css" />
+	<link rel="stylesheet" href="assets/css/slick-slider.css" />
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="assets/css/aos.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/css/mobile-menu.css" />
+	<link rel="stylesheet" href="assets/css/utility.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		.col-md-6{
+			padding: 0.5rem;
+			overflow: hidden;
+		}
+		.blog1-single-box{
+			overflow: hidden;
+		}
+		#uppercase{
+			text-transform: uppercase;
+		}
+	</style>
+
+	<!--=====JQUERY=======-->
+	<script src="assets/js/jquery-3-7-1.min.js"></script>
+</head>
+<body>
+    <div class="paginacontainer">
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
+		</div>
+	</div>
+
+	<!--=====progress END=======-->
+
+	<!--=====PRELOADER START=======-->
+
+
+	
+	<!-- search popup end -->
+
+	<!--=====HEADER START=======-->
+    <header>
+        <div class="header-area header-area1 d-none d-lg-block" id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header-elements">
+                            <div class="site-logo">
+                                <a >
+                                    <img src="assets/img/logo/header-logo1.png" alt="vexon" />
+                                </a>
+                            </div>
+                            <div class="main-menu-ex main-menu-ex1">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home <i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/article" class="main1">Article<i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/report" class="main1">Reports <i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/book" class="main1">Books <i class="fa-solid "></i></a>
+                                    </li>
+									<li class="dropdown-menu-parrent">
+                                        <a  class="main1">Account <i class="fa-solid fa-angle-down"></i></a>
+                                        <ul>
+                                           
+                                            <li><a href="/account">Edit profile</a></li>
+                                            <li><a href="/submit"> publish Your content</a></li>
+                                            <li><a href="/logout">logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header1-buttons">
+								
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<!--=====HEADER END=======-->
+
+	<!--=====Mobile header start=======-->
+	<div class="mobile-header mobile-header-main d-block d-lg-none">
+		<div class="container-fluid">
+			<div class="col-12">
+				<div class="mobile-header-elements">
+					<div class="mobile-logo">
+						<a ><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+					</div>
+					<div class="mobile-nav-icon">
+						<i class="fa-duotone fa-bars-staggered"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-sidebar d-block d-lg-none">
+		<div class="logo-m">
+			<a ><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+		</div>
+		<div class="menu-close">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+		<div class="mobile-nav">
+			<ul>
+				<li class="dropdown-menu-parrent">
+					<a href="#" class="main1">Account <i class="fa-solid fa-angle-down"></i></a>
+					<ul>
+						
+						<li><a href="/account">Edit profile</a></li>
+						<li><a href="/submit"> publish Your content</a></li>
+						<li><a href="/logout">logout</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			
+
+			<div class="footer-contact-area1 md:pl-0 pl-20 sm:pl-0 mt-30">
+				<h3 class="text-24 leading-26 font-semibold title1 pb-10">Get in touch</h3>
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon1.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="mailto:contact@vexon.com">contact@vexon.com</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon2.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="#">123 Innovation Drive,<br />
+							Tech City, ST 12345, USA</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon3.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="tel:+919904893164">9904893164</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-infos">
+				<h3>Our Social Network</h3>
+				<ul class="social-icon">
+					<li>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-youtube"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--=====Mobile header end=======-->
+    <div class="container container1">
+        <div class="form-container">
+            <% if (success_msg) { %>
+                <p style="color: green;"><%= success_msg %></p>
+            <% } %>
+            <% if (error_msg) { %>
+                <p style="color: red;"><%= error_msg %></p>
+            <% } %>
+
+            <h2 class="text-center" style="color: #0296d9 ; margin-bottom: 2rem;" >Submit Content</h2>
+            
+            <form action="/submit" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+                <div class="mb-3">
+                    <label for="type" class="form-label">Content Type:</label>
+                    <select
+                        class="form-select"
+                        name="type"
+                        id="type"
+                        required
+                        onchange="toggleFields()"
+                    >
+                        <option value="pdf">PDF</option>
+                        <option value="text">Text</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contentType" class="form-label">Content Type (Article, Report, Book):</label>
+                    <select
+                        class="form-select"
+                        name="contentType"
+                        id="contentType"
+                        required
+                    >
+                        <option value="article">Article</option>
+                        <option value="report">Report</option>
+                        <option value="book">Book</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        value="<%= user.email %>"
+                        required
+                    />
+                </div>
+
+                <div class="mb-3">
+                    <label for="Username" class="form-label">Username:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="Username"
+                        id="Username" 
+                        value="<%= user.username %>"
+                        required
+                    />
+                </div>
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="title"
+                        id="title"
+                        required
+                    />
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea
+                        class="form-control"
+                        name="description"
+                        id="description"
+                        rows="6"
+                        required
+                    ></textarea>
+                </div>
+
+                <div id="pdfField" class="mb-3">
+                    <label for="pdfFile" class="form-label">Upload PDF:</label>
+                    <input
+                        type="file"
+                        class="form-control"
+                        name="pdfFile"
+                        id="pdfFile"
+                        accept="application/pdf"
+                    />
+                </div>
+
+                <div id="textField" class="mb-3" style="display: none">
+                    <label for="textContent" class="form-label">Text Content:</label>
+                    <textarea
+                        class="form-control"
+                        name="textContent"
+                        id="textContent"
+                        rows="6"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-custom w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleFields() {
+            let type = document.getElementById("type").value;
+            document.getElementById("pdfField").style.display =
+                type === "pdf" ? "block" : "none";
+            document.getElementById("textField").style.display =
+                type === "text" ? "block" : "none";
+        }
+
+        function validateForm() {
+            let type = document.getElementById("type").value;
+            let pdfFile = document.getElementById("pdfFile").files.length;
+            let textContent = document.getElementById("textContent").value.trim();
+
+            if (type === "pdf" && pdfFile === 0) {
+                alert("Please upload a PDF file.");
+                return false;
+            }
+            if (type === "text" && textContent === "") {
+                alert("Please enter text content.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

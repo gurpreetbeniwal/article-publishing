@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="assetss/images/favicon-32x32.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= post.title %>
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header {
+      background: #f5f5f5;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header img {
+      height: 40px;
+      /* Adjust as needed */
+    }
+
+    .header .slash-btn {
+      background-color: #027bb3;
+      text-decoration: none;
+      color: #f5f5f5;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .header .slash-btn:hover {
+      background: #121212;
+    }
+
+    /* Main Content */
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      /* Adjusted for header */
+      padding: 20px;
+    }
+
+    .content-box {
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #0296d9;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #0296d9;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .pdf-container {
+      height: 600px;
+      overflow: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="logo.jpg" alt="Logo">
+    <a href="/" class="slash-btn">Right wala button</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="content-box">
+      <h1>
+        <%= post.title %>
+      </h1>
+      <p><strong>Email:</strong>
+        <%= post.email %>
+      </p>
+      <p><strong>Description:</strong>
+        <%= post.description %>
+      </p>
+
+      <h3>
+        <%= post.type==='pdf' ? 'PDF Content' : 'Text Content' %>
+      </h3>
+
+      <% if (post.type==='text' ) { %>
+        <p>
+          <%= post.textContent %>
+        </p>
+        <% } else if (post.type==='pdf' ) { %>
+          <div class="pdf-container">
+            <iframe src="<%= post.pdfFile %>" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <% } %>
+    </div>
+  </div>
+
+</body>
+
+</html>

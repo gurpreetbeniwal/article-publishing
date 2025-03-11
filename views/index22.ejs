@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Posts</h1>
+        <div id="posts-container">
+            <% posts.forEach(post => { %>
+                <div class="post">
+                    <h2><%= post.title %></h2>
+                    <p><%= post.description %></p>
+                </div>
+            <% }); %>
+        </div>
+        <button id="load-more" class="btn btn-primary">Load More</button>
+    </div>
+
+    <script>
+        let skip = 4; // Start skipping after the first 4 posts
+
+        document.getElementById('load-more').addEventListener('click', function() {
+            fetch(`/load-more/${skip}`)
+                .then(response => response.json())
+                .then(posts => {
+                    if (posts.length > 0) {
+                        posts.forEach(post => {
+                            const postDiv = document.createElement('div');
+                            postDiv.classList.add('post');
+                            postDiv.innerHTML = `<h2>${post.title}</h2><p>${post.description}</p>`;
+                            document.getElementById('posts-container').appendChild(postDiv);
+                        });
+                        skip += 4; // Increase the skip count
+                    } else {
+                        this.style.display = 'none'; // Hide the button if no more posts
+                    }
+                })
+                .catch(error => console.error('Error loading more posts:', error));
+        });
+    </script>
+</body>
+</html>

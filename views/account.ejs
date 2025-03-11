@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+    <link rel="icon" href="assetss/images/favicon-32x32.png" type="image/png">
+
+	<!--=====CSS=======-->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/fontawesome.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/nice-select.css" />
+	<link rel="stylesheet" href="assets/css/slick-slider.css" />
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="assets/css/aos.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/css/mobile-menu.css" />
+	<link rel="stylesheet" href="assets/css/utility.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		.col-md-6{
+			padding: 0.5rem;
+			overflow: hidden;
+		}
+		.blog1-single-box{
+			overflow: hidden;
+		}
+		#uppercase{
+			text-transform: uppercase;
+		}
+        .cant{
+            margin-top: 7rem;
+        }
+	</style>
+
+	<!--=====JQUERY=======-->
+	<script src="assets/js/jquery-3-7-1.min.js"></script>
+</head>
+<body>
+    <div class="paginacontainer">
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
+		</div>
+	</div>
+
+	<!--=====progress END=======-->
+
+	<!--=====PRELOADER START=======-->
+
+
+	
+	<!-- search popup end -->
+
+	<!--=====HEADER START=======-->
+    <header>
+        <div class="header-area header-area1 d-none d-lg-block" id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header-elements">
+                            <div class="site-logo">
+                                <a >
+                                    <img src="assets/img/logo/header-logo1.png" alt="vexon" />
+                                </a>
+                            </div>
+                            <div class="main-menu-ex main-menu-ex1">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home <i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/article" class="main1">Article<i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/report" class="main1">Reports <i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/book" class="main1">Books <i class="fa-solid "></i></a>
+                                    </li>
+									<li class="dropdown-menu-parrent">
+                                        <a  class="main1">Account <i class="fa-solid fa-angle-down"></i></a>
+                                        <ul>
+                                           
+                                            <li><a href="/account">Edit profile</a></li>
+                                            <li><a href="/submit"> publish Your content</a></li>
+                                            <li><a href="/logout">logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header1-buttons">
+								<% if (user) { console.log(user.Username) %>
+								  <!-- Display greeting if user is logged in -->
+								  <a class="theme-btn1" >Hello</a>
+								<% } else { %>
+								  <!-- Display login button if user is not logged in -->
+								  <a class="theme-btn1" href="/login">Login</a>
+								<% } %>
+							  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<!--=====HEADER END=======-->
+
+	<!--=====Mobile header start=======-->
+	<div class="mobile-header mobile-header-main d-block d-lg-none">
+		<div class="container-fluid">
+			<div class="col-12">
+				<div class="mobile-header-elements">
+					<div class="mobile-logo">
+						<a ><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+					</div>
+					<div class="mobile-nav-icon">
+						<i class="fa-duotone fa-bars-staggered"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-sidebar d-block d-lg-none">
+		<div class="logo-m">
+			<a ><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+		</div>
+		<div class="menu-close">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+		<div class="mobile-nav">
+			<ul>
+				<li class="dropdown-menu-parrent">
+					<a href="#" class="main1">Account <i class="fa-solid fa-angle-down"></i></a>
+					<ul>
+						
+						<li><a href="/account">Edit profile</a></li>
+						<li><a href="/submit"> publish Your content</a></li>
+						<li><a href="/logout">logout</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="mobile-button">
+				<% if (user) { %>
+				  <!-- Show greeting for logged-in users -->
+				  <a  class="theme-btn1">Hello</a>
+				<% } else { %>
+				  <!-- Show login button for guests -->
+				  <a href="/login" class="theme-btn1">Log In <i class="fa-solid fa-arrow-right"></i></a>
+				<% } %>
+			  </div>
+
+			<div class="footer-contact-area1 md:pl-0 pl-20 sm:pl-0 mt-30">
+				<h3 class="text-24 leading-26 font-semibold title1 pb-10">Get in touch</h3>
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon1.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="mailto:contact@vexon.com">contact@vexon.com</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon2.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="#">123 Innovation Drive,<br />
+							Tech City, ST 12345, USA</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon3.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="tel:+919904893164">9904893164</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-infos">
+				<h3>Our Social Network</h3>
+				<ul class="social-icon">
+					<li>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-youtube"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--=====Mobile header end=======-->
+    
+
+
+
+
+
+    <!--=====Start Here=======-->
+    <style>
+        .cant {
+            max-width: 400px;
+            margin: 50px auto; /* Centers the div horizontally */
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+    
+        h1, h2 {
+            color: #333;
+        }
+    
+        .alert {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+    
+        label {
+            font-weight: bold;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <br><br><br>
+    <div class="container cant">
+        <h1>Account Information</h1>
+    
+        <% if (success_msg.length > 0) { %>
+            <div class="alert alert-success">
+                <%= success_msg %>
+            </div>
+        <% } %>
+    
+        <% if (error_msg.length > 0) { %>
+            <div class="alert alert-danger">
+                <%= error_msg %>
+            </div>
+        <% } %>
+    
+        <form action="/account" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="<%= user.username %>" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= user.email %>" required>
+            </div>
+            <button type="submit">Update Information</button>
+        </form>
+        <br>
+        <hr>
+        <br>        
+        <h2>Change Password</h2>
+        <form action="/change-password" method="POST">
+            <div class="form-group">
+                <label for="currentPassword">Current Password:</label>
+                <input type="password" id="currentPassword" name="currentPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Change Password</button>
+        </form>
+    
+        <a href="/dashboard">Back to Dashboard</a>
+    </div>
+    
+<!--===== End Here =======-->
+
+
+
+<!--===== FOOTER AREA START=======-->
+
+<div class="footer1 mt-80 md:mt-40 sm:mt-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+                </div>
+                <div class="heading1 mt-16">
+                    <p>Vexon is your hub for the latest in digital innovation, technology trends, creative insights.
+                        Our mission is to empower creators, businesses, valuable resource.</p>
+                    <div class="footer-social1">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-regular fa-basketball"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-behance"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-50 sm:mb-30 sm:mt-30">
+                <div class="footer-list1 ml-80 md:ml-0 sm:ml-0">
+                    <h3>Explore Categories</h3>
+                    <ul>
+                        <li><a href="#">Digital Marketing </a></li>
+                        <li><a href="#">Ai & Technology </a></li>
+                        <li><a href="#">Content Strategy </a></li>
+                        <li><a href="#">Social Media </a></li>
+                        <li><a href="#">SEO & Analytics </a></li>
+                        <li><a href="#">Design & Development </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-list1 ml-50 md:ml-0 sm:ml-0 mb-50 sm:mb-30">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home </a></li>
+                        <li><a href="#">Blog </a></li>
+                        <li><a href="#">Features </a></li>
+                        <li><a href="#">Contact us </a></li>
+                        <li><a href="#">Privacy & policy </a></li>
+                        <li><a href="#">Terms of Services </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-contact-list1 mb-50 sm:mb-30">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-box1">
+                        <div class="icon">
+                            <img src="assets/img/icons/footer1-icon1.svg" alt="vexon" />
+                        </div>
+                        <div class="text">
+                            <a href="#">support@vexon.com</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-box1">
+                        <div class="icon">
+                            <img src="assets/img/icons/footer1-icon2.svg" alt="vexon" />
+                        </div>
+                        <div class="text">
+                            <a href="#">8708 Technology Forest Pl <br />
+                                Suite 125 -G, The Woodlands, <br />
+                                TX 773</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-box1">
+                        <div class="icon">
+                            <img src="assets/img/icons/footer1-icon3.svg" alt="vexon" />
+                        </div>
+                        <div class="text">
+                            <a href="#">123-456-7890</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coppyrihgt1">
+            <div class="row coppyrihgt-border">
+                <div class="col-md-6">
+                    <p class="coppyrihgt">©️ 2024 Vexon, Inc. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="conditions">
+                        <a href="#"> Privacy Policy </a>
+                        <a href="#"> Terms & Conditions </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--===== FOOTER AREA END=======-->
+
+<!--=== js === -->
+<script>
+    let skip = 4; // Start skipping after the first 4 posts
+
+    document.getElementById('load-more').addEventListener('click', function() {
+        fetch(/load-more/${skip})
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(posts => {
+                if (posts.length > 0) {
+                    posts.forEach(post => {
+                        const postDiv = document.createElement('div');
+                        postDiv.classList.add('col-md-6');
+                        postDiv.setAttribute('data-aos', 'fade-up');
+                        postDiv.setAttribute('data-aos-offset', '50');
+                        postDiv.setAttribute('data-aos-duration', '400');
+                        postDiv.setAttribute('data-aos-delay', '0');
+                        postDiv.innerHTML = `
+                            <div class="blog1-single-box">
+                                <div class="heading1">
+                                    <div class="social-area <a href="social-media.html" class="social" id="uppercase">${post.contentType}</a>
+                                     
+                                    </div>
+                                    <h4><a href="/post/${post._id}">${post.title}</a></h4>
+                                    <p class="mt-16">${post.description}</p>
+                                    <div class="author-area">
+                                        <div class="author">
+                                            <a  class="author-text">${post.email}</a>
+                                        </div>
+                                        <div class="date">
+                                            <a href="#"><img src="assets/img/icons/date1.svg" alt="vexon" /> ${new Date(post.createdAt).toLocaleDateString()} </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        document.querySelector('.blog1-posts-area .row').appendChild(postDiv);
+                    });
+                    skip += 4; // Increase the skip count for the next load
+                } else {
+                    document.getElementById('load-more').style.display = 'none'; // Hide button if no more posts
+                }
+            })
+            .catch(err => console.error('Error loading more posts:', err));
+    });
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/fontawesome.js"></script>
+<script src="assets/js/mobile-menu.js"></script>
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.countup.js"></script>
+<script src="assets/js/slick-slider.js"></script>
+<script src="assets/js/circle-progress.js"></script>
+<script src="assets/js/jquery.nice-select.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/swiper-bundle.js"></script>
+<script src="assets/js/Splitetext.js"></script>
+<script src="assets/js/text-animation.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jaquery-ripples.js"></script>
+<script src="assets/js/jquery.lineProgressbar.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
+</html>
