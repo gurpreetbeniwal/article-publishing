@@ -4,6 +4,7 @@ const Admin = require('../models/admin'); // Import Admin model
 const router = express.Router();
 const path = require('path');
 const fs = require('fs');
+const session = require('express-session');
 const Content = require('../models/Content');
 const User = require('../models/User'); // Import your User model
 router.use(express.static(path.join(__dirname, 'public')));
@@ -11,12 +12,11 @@ router.use(express.static(path.join(__dirname, 'public')));
 // Admin Signup Route
 router.get('/admin/signup', (req, res) => {
 
-    if (!req.session.adminId) {
-       
+
        return res.render('admin/register');
-    }
     
-     res.redirect('/admin/logina');
+    
+   
 });
 
 router.post('/admin/signup', async (req, res) => {

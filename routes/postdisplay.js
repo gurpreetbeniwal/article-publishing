@@ -6,6 +6,8 @@ const Content = require('../models/Content');
 const User = require('../models/User');
 
 const LocalStrategy = require('passport-local').Strategy;
+const passport = require('passport');
+
 
 const router = express.Router();
 router.use(express.static(path.join(__dirname, 'public')));
@@ -15,7 +17,7 @@ router.get('/', async (req, res) => {
         const posts = await Content.find({ status: true })
             .sort({ createdAt: -1 })
             .limit(4);
-
+        
         // Pass the entire user object instead of just username
         res.render('index', { 
             posts,

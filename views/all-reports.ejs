@@ -35,88 +35,85 @@
 <body>
 
   <!--start header-->
- <header class="top-header">
-  <nav class="navbar navbar-expand align-items-center justify-content-between gap-4 border-bottom">
-    <div class="logo-header d-none d-xl-flex align-items-center gap-2">
-      <div class="logo-icon">
-        <img src="assetss/images/logo-icon.png" class="logo-img" width="45" alt="">
+  <header class="top-header">
+    <nav class="navbar navbar-expand align-items-center justify-content-between gap-4 border-bottom">
+      <div class="logo-header d-none d-xl-flex align-items-center gap-2">
+        <div class="logo-icon">
+          <img src="assetss/images/logo-icon.png" class="logo-img" width="130" alt="">
+        </div>
+        <div class="logo-name">
+          <h5 class="mb-0"></h5>
+        </div>
       </div>
-      <div class="logo-name">
-        <h5 class="mb-0">Maxton</h5>
-      </div>
-    </div>
-    <div class="btn-toggle d-xl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-      <a href="javascript:;"><i class="material-icons-outlined">menu</i></a>
-    </div>
-    <div class="search-bar">
-      <div class="position-relative">
-        <input class="form-control rounded-5 px-5 search-control d-lg-block d-none" type="text" placeholder="Search">
-        <span class="material-icons-outlined position-absolute d-lg-block d-none ms-3 translate-middle-y start-0 top-50">search</span>
-        <span class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 search-close">close</span>
-        <div class="search-popup p-3">
-          <div class="card rounded-4 overflow-hidden">
-            <div class="card-header d-lg-none">
-              <div class="position-relative">
-                <input class="form-control rounded-5 px-5 mobile-search-control" type="text" placeholder="Search">
-                <span class="material-icons-outlined position-absolute ms-3 translate-middle-y start-0 top-50">search</span>
-                <span class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 mobile-search-close">close</span>
-               </div>
-            </div>
+      
+      <div class="search-bar">
+        <div class="position-relative">
+          <input class="form-control rounded-5 px-5 search-control d-lg-block d-none" type="text" placeholder="Search">
+          <span class="material-icons-outlined position-absolute d-lg-block d-none ms-3 translate-middle-y start-0 top-50">search</span>
+          <span class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 search-close">close</span>
+          <div class="search-popup p-3">
+            <div class="card rounded-4 overflow-hidden">
+              <div class="card-header d-lg-none">
+                <div class="position-relative">
+                  <input class="form-control rounded-5 px-5 mobile-search-control" type="text" placeholder="Search">
+                  <span class="material-icons-outlined position-absolute ms-3 translate-middle-y start-0 top-50">search</span>
+                  <span class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 mobile-search-close">close</span>
+                 </div>
+              </div>
+             
            
-         
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <ul class="navbar-nav gap-1 nav-right-links align-items-center">
-      
-      
-
-   
-      <li class="nav-item dropdown">
-        <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
-           <img src="assetss/images/profile.png" class="rounded-circle p-1 border" width="45" height="45" alt="">
-        </a>
-        <div class="dropdown-menu dropdown-user dropdown-menu-end shadow">
-          <a class="dropdown-item  gap-2 py-2" href="javascript:;">
-            <div class="text-center">
-              <img src="assetss/images/profile.png" class="rounded-circle p-1 shadow mb-3" width="90" height="90"
-                alt="">
-              <h5 class="user-name mb-0 fw-bold">Hello , Sir </h5>
-            </div>
+      <ul class="navbar-nav gap-1 nav-right-links align-items-center">
+        
+        
+  
+     
+        <li class="nav-item dropdown">
+          <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+             <img src="assetss/images/profile.png" class="rounded-circle p-1 border" width="45" height="45" alt="">
           </a>
-          <hr class="dropdown-divider">
-         
-          <a href="/admin/dashboard" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-            class="material-icons-outlined">dashboard</i>Dashboard</a>
-
+          <div class="dropdown-menu dropdown-user dropdown-menu-end shadow">
+            <a class="dropdown-item  gap-2 py-2" href="javascript:;">
+              <div class="text-center">
+                <img src="assetss/images/profile.png" class="rounded-circle p-1 shadow mb-3" width="90" height="90"
+                  alt="">
+                <h5 class="user-name mb-0 fw-bold">Hello , Admin </h5>
+              </div>
+            </a>
+            <hr class="dropdown-divider">
+           
+            <a href="/admin/dashboard" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+              class="material-icons-outlined">dashboard</i>Dashboard</a>
+  
+              
+                  <a href="/dash-panding" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                      class="material-icons-outlined"></i>Panding Requests</a>
             
-                <a href="/dash-panding" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-                    class="material-icons-outlined"></i>Panding Requests</a>
-          
-                    <a href="/all-article" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-                        class="material-icons-outlined"></i>Article </a>
-
-
-                    <a href="/all-reports" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-                        class="material-icons-outlined"></i> Reports </a>
-          
-          
-                        <a href="/all-books" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-                            class="material-icons-outlined"></i> Books </a>
-                          
-                            <a href="/admin/signup" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-                                class="material-icons-outlined">person_outline</i>Creat New Admin</a>
-                              
-       
-          <a  href="/admin/logout" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-          class="material-icons-outlined">power_settings_new</i>Logout</a>
-        </div>
-      </li>
-    </ul>
-
-  </nav>
-</header>
+                      <a href="/all-article" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                          class="material-icons-outlined"></i>Article </a>
+  
+  
+                      <a href="/all-reports" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                          class="material-icons-outlined"></i> Reports </a>
+            
+            
+                          <a href="/all-books" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                              class="material-icons-outlined"></i> Books </a>
+                            
+                             
+                                
+         
+            <a  href="/admin/logout" class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+            class="material-icons-outlined">power_settings_new</i>Logout</a>
+          </div>
+        </li>
+      </ul>
+  
+    </nav>
+  </header>
 <!--end top header-->
 
 
@@ -129,7 +126,7 @@
     <div class="main-content">
       <!--breadcrumb-->
       <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3">Dashboard</div>
+        <div class="breadcrumb-title pe-3">All Reports</div>
         <div class="ps-3">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0 p-0">

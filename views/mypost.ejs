@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="assetss/images/favicon-32x32.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Posts</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vexon - Modern Blog</title>
+
+	<!--=====FAB ICON=======-->
+	<link rel="shortcut icon" href="assets/img/logo/title1.svg" type="image/x-icon" />
+
+	<!--=====CSS=======-->
+    <!--=====Mobile header end=======-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -31,31 +37,245 @@
             margin: 5px; /* Add spacing between buttons */
         }
         .table td {
-            word-break: break-word; /* Prevent long words from breaking layout */
+            word-break: break-word; 
+			/* Prevent long words from breaking layout */
         }
+		.table{
+			border-radius: 2rem;
+		}
+        .cant{
+            margin-top: 8rem;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			border-radius: 2rem;
+        }
+		.uname{
+			color: #007bff;
+			text-transform: uppercase;
+		}
     </style>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/fontawesome.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/nice-select.css" />
+	<link rel="stylesheet" href="assets/css/slick-slider.css" />
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="assets/css/aos.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/css/mobile-menu.css" />
+	<link rel="stylesheet" href="assets/css/utility.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		.col-md-6{
+			padding: 0.5rem;
+			overflow: hidden;
+		}
+		.blog1-single-box{
+			overflow: hidden;
+		}
+		#uppercase{
+			text-transform: uppercase;
+		}
+	</style>
+
+	<!--=====JQUERY=======-->
+	<script src="assets/js/jquery-3-7-1.min.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="text-center mb-4">My Submitted Posts</h1>
+	<div class="paginacontainer">
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
+		</div>
+	</div>
+
+	<!--=====progress END=======-->
+
+	<!--=====PRELOADER START=======-->
+
+
+	
+	<!-- search popup end -->
+
+	<!--=====HEADER START=======-->
+    <header>
+        <div class="header-area header-area1 d-none d-lg-block" id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header-elements">
+                            <div class="site-logo">
+                                <a >
+                                    <img src="assets/img/logo/header-logo1.png" alt="vexon" />
+                                </a>
+                            </div>
+                            <div class="main-menu-ex main-menu-ex1">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home <i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/article" class="main1">Article<i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/report" class="main1">Reports <i class="fa-solid "></i></a>
+                                    </li>
+                                    <li class="dropdown-menu-parrent">
+                                        <a href="/book" class="main1">Books <i class="fa-solid "></i></a>
+                                    </li>
+									<li class="dropdown-menu-parrent">
+                                        <a  class="main1">Account <i class="fa-solid fa-angle-down"></i></a>
+                                        <ul>
+                                           
+                                            <li><a href="/account">Edit profile</a></li>
+                                            <li><a href="/submit"> publish Your content</a></li>
+											<li><a href="/mypost"> My Post</a></li>
+                                            <li><a href="/logout">logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header1-buttons">
+								<% if (user) {  %>
+								  <!-- Display greeting if user is logged in -->
+								  <a class="theme-btn1" >Hello , Author</a>
+								<% } else { %>
+								  <!-- Display login button if user is not logged in -->
+								  <a class="theme-btn1" href="/login">Login</a>
+								<% } %>
+							  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<!--=====HEADER END=======-->
+
+	<!--=====Mobile header start=======-->
+	<div class="mobile-header mobile-header-main d-block d-lg-none">
+		<div class="container-fluid">
+			<div class="col-12">
+				<div class="mobile-header-elements">
+					<div class="mobile-logo">
+						<a ><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+					</div>
+					<div class="mobile-nav-icon">
+						<i class="fa-duotone fa-bars-staggered"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-sidebar d-block d-lg-none">
+		<div class="logo-m">
+			<a ><img src="assets/img/logo/header-logo1.png" alt="vexon" /></a>
+		</div>
+		<div class="menu-close">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+		<div class="mobile-nav">
+			<ul>
+				<li class="dropdown-menu-parrent">
+					<a href="#" class="main1">Account <i class="fa-solid fa-angle-down"></i></a>
+					<ul>
+						
+						<li><a href="/account">Edit profile</a></li>
+						<li><a href="/submit"> publish Your content</a></li>
+						<li><a href="/logout">logout</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="mobile-button">
+				<% if (user) { %>
+				  <!-- Show greeting for logged-in users -->
+				  <a  class="theme-btn1">Hello</a>
+				<% } else { %>
+				  <!-- Show login button for guests -->
+				  <a href="/login" class="theme-btn1">Log In <i class="fa-solid fa-arrow-right"></i></a>
+				<% } %>
+			  </div>
+
+			<div class="footer-contact-area1 md:pl-0 pl-20 sm:pl-0 mt-30">
+				<h3 class="text-24 leading-26 font-semibold title1 pb-10">Get in touch</h3>
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon1.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="mailto:contact@vexon.com">contact@vexon.com</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon2.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="#">123 Innovation Drive,<br />
+							Tech City, ST 12345, USA</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="assets/img/icons/footer1-icon3.svg" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="tel:+919904893164">9904893164</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-infos">
+				<h3>Our Social Network</h3>
+				<ul class="social-icon">
+					<li>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-youtube"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--=====Mobile header end=======-->
+
+
+    <div class="container cant">
+		<br>
+		<br>
+        <h1 style="color: black; font-size: xx-large;" class="text-center mb-4 uname ">My Submitted Posts</h1>
 
         <% if (user) { %>
-            <h2 class="text-center">Welcome, <%= user.Username %>!</h2>
-            <p class="text-center">Email: <%= user.email %></p>
+            <h2 class="text-center uname" style="color: black;  font-size: x-large; ">Welcome, <span style="color: #007bff;"><%= user.username %>! </span>  </h2>
+            <p class="text-center"></p>
         <% } else { %>
             <p class="text-center text-danger">Please log in to view your submitted posts.</p>
         <% } %>
-
+<br><br>
         <% if (contents.length > 0) { %>
             <div class="table-responsive">
-                <table class="table table-striped table-bordered">
+                <table style="border-radius: 3rem;" class="table table-striped table-bordered">
                     <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Type</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+                        <tr >
+                            <th style="color: black;" >Title</th>
+                            <th style="color: black;">Description</th>
+                            <th style="color: black;">Type</th>
+                            <th style="color: black;">Status</th>
+                            <th style="color: black;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -81,7 +301,7 @@
             <p class="text-center">No posts submitted yet.</p>
         <% } %>
     </div>
-
+<br><br><br><br>
     <script>
         function confirmDelete(postId, userEmail) {
             const confirmation = confirm("Are you sure you want to delete this post? This action cannot be undone.");

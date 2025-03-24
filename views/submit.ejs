@@ -129,15 +129,21 @@
                                            
                                             <li><a href="/account">Edit profile</a></li>
                                             <li><a href="/submit"> publish Your content</a></li>
+											<li><a href="/mypost"> My Post</a></li>
                                             <li><a href="/logout">logout</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                             <div class="header1-buttons">
-								
-                                
-                            </div>
+								<% if (user) {  %>
+								  <!-- Display greeting if user is logged in -->
+								  <a class="theme-btn1" >Hello , Author</a>
+								<% } else { %>
+								  <!-- Display login button if user is not logged in -->
+								  <a class="theme-btn1" href="/login">Login</a>
+								<% } %>
+							  </div>
                         </div>
                     </div>
                 </div>
@@ -183,7 +189,15 @@
 				</li>
 			</ul>
 
-			
+			<div class="mobile-button">
+				<% if (user) { %>
+				  <!-- Show greeting for logged-in users -->
+				  <a  class="theme-btn1">Hello</a>
+				<% } else { %>
+				  <!-- Show login button for guests -->
+				  <a href="/login" class="theme-btn1">Log In <i class="fa-solid fa-arrow-right"></i></a>
+				<% } %>
+			  </div>
 
 			<div class="footer-contact-area1 md:pl-0 pl-20 sm:pl-0 mt-30">
 				<h3 class="text-24 leading-26 font-semibold title1 pb-10">Get in touch</h3>
@@ -235,7 +249,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!--=====Mobile header end=======-->
     <div class="container container1">
         <div class="form-container">

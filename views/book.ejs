@@ -87,15 +87,16 @@
                                            
                                             <li><a href="/account">Edit profile</a></li>
                                             <li><a href="/submit"> publish Your content</a></li>
+											<li><a href="/mypost"> My Post</a></li>
                                             <li><a href="/logout">logout</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                             <div class="header1-buttons">
-								<% if (user) { console.log(user.Username) %>
+								<% if (user) {  %>
 								  <!-- Display greeting if user is logged in -->
-								  <a class="theme-btn1" >Hello</a>
+								  <a class="theme-btn1" >Hello , Author</a>
 								<% } else { %>
 								  <!-- Display login button if user is not logged in -->
 								  <a class="theme-btn1" href="/login">Login</a>
@@ -217,7 +218,7 @@
 				<div class="row align-items-center">
 					<div class="col-lg-5">
 						<div class="main-image reveal">
-							<img src="assets/img/hero/hero1-image.png" alt="vexon" />
+							<img src="1.gif" alt="vexon" />
 						</div>
 					</div>
 					<div class="col-lg-6">
